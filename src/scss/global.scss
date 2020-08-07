@@ -1,0 +1,78 @@
+@function shade($red, $green, $blue, $difference) {
+    @return rgb($red + $difference, $green + $difference, $blue + $difference)
+}
+
+
+$clr-original: shade(10, 30, 75, -10);
+$clr-button: shade(10, 30, 75, 2);
+$clr-box-shadow: shade(10, 30, 75, +13);
+$text-color: shade(10, 30, 75, 150);
+$clr-top: shade(10, 30, 75, 34);
+$clr-bottom: shade(10, 30, 75, 16);
+$clr-border: shade(10, 30, 75, -12);
+$pro-box-shadow: shade(10, 30, 75, 19);
+$pro-bg-color: shade(10, 30, 75, 2);
+
+
+.custom-button {
+    text-decoration: none;
+    visibility: visible;
+    user-select: none;
+    list-style: none;
+    display: block;
+    padding: 8px 5px;
+    background-color: $clr-button;
+    color: $text-color;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: $clr-border;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: .8em;
+    line-height: 1em;
+    box-shadow: 1px 1px 0 $clr-box-shadow;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 50%;
+        width: 100%;
+        transition: transform 250ms linear;
+        z-index: 1;
+    }
+
+    &::before {
+        background-color: $clr-top;
+        transform: translate3d(-105%, 0, 0);
+        top: 0;
+        left: 0;
+    }
+
+    &:after {
+        background-color: $clr-bottom;
+        transform: translate3d(105%, 0, 0);
+        bottom: 0;
+        right: 0;
+    }
+
+    &:hover {
+
+        &::before,
+        &::after {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+}

@@ -1,0 +1,5 @@
+@function shade($red, $green, $blue, $difference) {
+    @return rgb($red + $difference, $green + $difference, $blue + $difference)
+};
+
+$main-color: shade(10, 200, 10, 39);

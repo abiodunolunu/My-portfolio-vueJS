@@ -1,28 +1,146 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <navigation-bar />
+    </header>
+    <main class="main">
+      <transition mode="out-in" name="router-anim">
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+/* eslint-disable vue/no-unused-components */
+import NavigationBar from "./components/NavigationBar";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    NavigationBar,
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.parent {
+  height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.has-shadow {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  color: #fff;
+  &::before,
+  &::after {
+    line-height: 1;
+    position: absolute;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: "Kalam", cursive;
+    color: $text-color;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    content: attr(data-before);
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+    content: attr(data-after);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1320px;
+}
+
+body {
+  background: #1d1d1d;
+  width: 100vw;
+  overflow-x: hidden;
+  background: $clr-original;
+}
+
+header {
+  background-color: $clr-button;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+main {
+  overflow: hidden;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.router-anim-enter-active {
+  animation: coming 1s linear;
+}
+.router-anim-leave-active {
+  animation: going 1s linear;
+}
+
+@keyframes going {
+  from {
+    // transform:  rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) scale(1) skewX(0deg) skewY(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+@keyframes coming {
+  from {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
 }
 </style>
