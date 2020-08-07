@@ -63,8 +63,6 @@ section.projects {
   h1 {
     text-align: center;
     width: 100%;
-
-
   }
   h3.title {
     text-align: center;

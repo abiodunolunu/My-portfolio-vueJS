@@ -90,6 +90,8 @@ body {
   width: 100vw;
   overflow-x: hidden;
   background: $clr-original;
+  max-width: 1500px;
+  margin: auto;
 }
 
 header {

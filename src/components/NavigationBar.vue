@@ -73,6 +73,7 @@ ul.nav-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  list-style: none;
 
   li {
     // height: 50px;

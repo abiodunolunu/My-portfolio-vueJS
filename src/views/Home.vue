@@ -19,13 +19,14 @@ export default {};
 
 <style lang="scss" scoped>
 .parent {
-  background-image: url("../assets/img/wall.png");
+  background-image: url("../assets/img/wall.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $text-color;
   background-blend-mode: luminosity;
 }
 .text {
+  text-shadow: 1px 2px #000;
   h1 {
     color: $text-color;
 
@@ -53,6 +54,16 @@ export default {};
       border: 1px solid $text-color;
       color: #181818;
     }
+  }
+}
+@media (min-width: 600px) {
+  .text {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 50px;
   }
 }
 </style>
