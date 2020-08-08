@@ -5,7 +5,7 @@
     </div>
     <div class="project__content">
       <p class="title">{{project.title}}</p>
-      <p>An App where Football / Soccer fans can connect and live chat.</p>
+      <p class="desc">{{project.desc}}</p>
       <div class="technology">
         <h3>Technologies used:</h3>
         <ul>
@@ -44,7 +44,7 @@ export default {
   margin-bottom: 30px;
   border-radius: 5px;
   overflow: hidden;
-  min-height: 550px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
 
@@ -56,6 +56,10 @@ export default {
       width: 100%;
       object-fit: cover;
     }
+  }
+
+  .desc {
+    min-height: 65px;
   }
 
   .project__content {

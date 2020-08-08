@@ -18,6 +18,8 @@ export default {
       projects: [
         {
           title: "Asknonymous",
+          desc:
+            "A website where users can send and receive anonymous messages with shareable links.",
           stack: ["HTML", "CSS", "EXPRESS", "MONGODB"],
           imageLink:
             "https://res.cloudinary.com/abeydev/image/upload/v1596743782/portfolio/Asknoymous_nk09jb.png",
@@ -28,7 +30,8 @@ export default {
         },
         {
           title: "MY PICTURE APP",
-          stack: ["HTML", "CSS", "Vue.Js", "Express", "GraphQL"],
+          desc: "A website where users can share and interact with pictures.",
+          stack: ["HTML", "CSS", "SCSS", "Vue.Js", "Express", "GraphQL"],
           imageLink:
             "https://res.cloudinary.com/abeydev/image/upload/v1596743781/portfolio/picture-app_hrjubl.png",
           links: {
@@ -38,6 +41,7 @@ export default {
         },
         {
           title: "football-live-chat",
+          desc: "real time live chat app/website for football/soccer fans.",
           stack: ["HTML", "CSS", "JS", "EXPRESS", "MONGODB", "WEBSOCKETS"],
           imageLink:
             "https://res.cloudinary.com/abeydev/image/upload/v1596743782/portfolio/SoccerChat_rg63xz.png",
@@ -45,6 +49,18 @@ export default {
             live: "https://football-live-chat.herokuapp.com/",
             code:
               "https://github.com/abiodunolunu/football-soccer-chat-LIVE-chat-app-with-rooms",
+          },
+        },
+        {
+          title: "URL Shortner",
+          desc:
+            "A website where you can convert long links into really short ones",
+          stack: ["HTML", "CSS", "SCSS", "EXPRESS", "MONGODB"],
+          imageLink:
+            "https://res.cloudinary.com/abeydev/image/upload/v1596857262/portfolio/url-shortner_kfprkb.png",
+          links: {
+            live: "https://abedev.herokuapp.com/",
+            code: "https://github.com/abiodunolunu/url-shortner",
           },
         },
       ],

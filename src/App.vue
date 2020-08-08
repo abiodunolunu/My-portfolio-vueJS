@@ -118,30 +118,31 @@ main {
 }
 
 .router-anim-enter-active {
+  transform-origin: center;
   animation: coming 1s linear;
 }
 .router-anim-leave-active {
+  transform-origin: center;
   animation: going 1s linear;
 }
 
 @keyframes going {
   from {
-    // transform:  rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) scale(1) skewX(0deg) skewY(0deg);
-    transform: rotateX(0deg);
+    transform: rotateY(0deg) scale(1);
     opacity: 1;
   }
   to {
-    transform: rotateX(90deg);
+    transform: rotateY(90deg) scale(2);
     opacity: 0;
   }
 }
 @keyframes coming {
   from {
-    transform: rotateX(-90deg);
+    transform: rotateY(-90deg) scale(2);
     opacity: 0;
   }
   to {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg) scale(1);
     opacity: 1;
   }
 }
