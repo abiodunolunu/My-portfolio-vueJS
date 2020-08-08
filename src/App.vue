@@ -35,10 +35,16 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  font-size: 14px !important;
+}
+
 .parent {
   height: 100vh;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   .container {
     height: 100%;
@@ -144,6 +150,13 @@ main {
   to {
     transform: rotateY(0deg) scale(1);
     opacity: 1;
+  }
+}
+
+
+@media (min-width: 550px) {
+  p {
+    font-size: 15px !important;
   }
 }
 </style>

@@ -45,6 +45,7 @@ export default {
   border-radius: 5px;
   overflow: hidden;
   min-height: 600px;
+  // max-width: 250px;
   display: flex;
   flex-direction: column;
 

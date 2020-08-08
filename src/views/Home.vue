@@ -26,7 +26,7 @@ export default {};
   background-blend-mode: luminosity;
 }
 .text {
-  text-shadow: 1px 2px #000;
+  text-shadow: 2px 1px #000;
   h1 {
     color: $text-color;
 

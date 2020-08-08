@@ -32,7 +32,7 @@ export default {};
 
   p {
     color: $text-color;
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 }
 

@@ -101,7 +101,7 @@ section.projects {
     padding-top: 30px;
     padding-bottom: 30px;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: auto;
     gap: 1.5rem;
     grid-auto-rows: auto;
     place-items: center;

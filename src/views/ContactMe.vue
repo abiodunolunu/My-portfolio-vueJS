@@ -89,7 +89,7 @@ export default {
     justify-content: center;
     border: 1px solid $text-color;
     height: 40px;
-    color: #fff;
+    color: $text-color;
     border-radius: 5px;
 
     &.mail {
